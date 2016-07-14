@@ -1,27 +1,27 @@
-% ----------------------------------------------------------------------- %
-% ----------------------------- Description ----------------------------- %
-% ----------------------------------------------------------------------- %————————fdsfdsfdfddfgfgfggfgfgdfdgfdgf
-TopoZeko is a MATLAB function developed to make 3-D and 4-D plots of
-surfaces with a pronounced topographical setting such as glaciers,
-volcanoes and lakes in mountaineous regions. It is strongly encouraged to
-use this code for your scientific publications, presentations, teaching
-material,...etc.
+% -------------------------------------------------------------------------------------- %
+% ------------------------------------- Description ------------------------------------ %
+% -------------------------------------------------------------------------------------- %
+TopoZeko is a MATLAB function developed to make 3-D and 4-D plots of surfaces with a 
+pronounced topographical setting such as glaciers, volcanoes and lakes in mountaineous 
+regions. It is strongly encouraged to use this code for your scientific publications, 
+presentations, teaching material,...etc.
 
+% -------------------------------------------------------------------------------------- %
+% -------------------------------------- Reference ------------------------------------- %
+% -------------------------------------------------------------------------------------- %
+Zekollari, H. (?), A MATLAB function for 3-D and 4-D topographical visualisation in 
+geosciences, Journal.
 
-% ----------------------------------------------------------------------- %
-% ------------------------------ Reference ------------------------------ %
-% ----------------------------------------------------------------------- %
-Zekollari, H. (?), A MATLAB function for 3-D and 4-D topographical 
-visualisation in geosciences', Journal.
+Consult this manuscript for various examples, applications and documentation of the 
+TopoZeko function.
 
-
-% ----------------------------------------------------------------------- %
-% ------------------------- Usage and examples -------------------------- %
-% ----------------------------------------------------------------------- %
-All files (function, scripts and data) are available in the folders with 
-the respective version numbers. Launch the scripts 
-(e.g. example_Morteratsch_figure1.m) to reproduce the figures from the manuscript.
-For your own visualizations use the TopoZeko.m function and adapt to specific needs.
+% -------------------------------------------------------------------------------------- %
+% --------------------------------- Usage and examples --------------------------------- %
+% -------------------------------------------------------------------------------------- %
+All files (function, scripts and data) are available in the folders with the respective 
+version numbers. Launch the scripts (e.g. example_Morteratsch_figure1.m) to reproduce the 
+figures from the manuscript. For your own visualizations use the TopoZeko.m function and 
+adapt to specific needs.
 
 Examples of function calls:
 
@@ -40,8 +40,7 @@ matrix 'VEL' (4th dimension)
 The visualization can be modified with up to 40 additional parameters
 when calling the function (see manuscript).
 
-
-% ----------------------------------------------------------------------- %
-% ------------------------------ Versions ------------------------------- %
-% ----------------------------------------------------------------------- %
-* v1.0: first version, as described in the manuscript
+% -------------------------------------------------------------------------------------- %
+% -------------------------------------- Reference ------------------------------------- %
+% -------------------------------------------------------------------------------------- %
+---> v1.0: first version, as described in the manuscript
