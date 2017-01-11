@@ -16,6 +16,16 @@ function [h,a] = SunZeko(Decl,Lat,LHA)
 % ------------------ github.com/zekollari/TopoZeko ---------------------- %
 % ----------------------------------------------------------------------- %
 
+if Decl<-23.45 || Decl>23.45
+    error('Error: the declination (decl) must be between -23.45° and +23.45°')
+end
+if Lat<-90 || Lat>90
+    error('Error: the geographic latitude (LAT) must be between -90° and +90°')
+end
+if LHA<-180 || LHA>180
+    error('Error: the local hour angle (LHA) must be between -180° and +180°')
+end
+
 % Calculation of the elevation of the sun (h)
 h=asind(sind(Lat)*sind(Decl)+cosd(Lat)*cosd(Decl)*cosd(LHA));
 
