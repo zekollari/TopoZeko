@@ -20,6 +20,7 @@ Folder content:
 - Data needed to reproduce figures (DEM of surface and bedrock elevation):
 	o example_data_Morteratsch_25m.mat
 	o example_data_Galapagos_100m.mat
-- 2 animations (videos) that are created with scripts:
-	o video1_glacier_retreat_4d.avi
-	o video2_Galapagos_shadow_decl23.avi
+- 3 animations (videos) that are created with scripts:
+	o video1_glacier_retreat_3d+.avi
+	o video2_glacier_retreat_4d.avi
+	o video3_Galapagos_shadow_decl23.avi

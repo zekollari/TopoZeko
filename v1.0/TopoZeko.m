@@ -38,27 +38,27 @@ p = inputParser;
 % List of optional parameters and default values:
 % addParamValue --> addParameter (works from R2013b, recommened to use this if run with version after R2013b)
 addParamValue(p,'axes','off');                   % Show the axes. Two options: 'on' and 'off'
-addParamValue(p,'bed_colors',128);               % Number of colours for bedrock (integer, should at least be 1)
-addParamValue(p,'bed_colormap','copper')         % MATLAB colormap (colour scheme) for the bedrock
-addParamValue(p,'bed_colormap_flipud','on')      % Inverse the colormap (colour scheme) for the bedrock. Two options: 'on' and 'off'
+addParamValue(p,'bed_colors',128);               % Number of colors for bedrock (integer, should at least be 1)
+addParamValue(p,'bed_colormap','copper')         % MATLAB colormap (color scheme) for the bedrock
+addParamValue(p,'bed_colormap_flipud','on')      % Inverse the colormap (color scheme) for the bedrock. Two options: 'on' and 'off'
 addParamValue(p,'bed_trans',1);                  % Transparency of the bedrock. 0: fully transparent, 1: non-transparent
-addParamValue(p,'caxis','');                     % Range of the colour bar.  Works only for 4-D plots: Will not have any effect for 3-D plot.
-addParamValue(p,'cbar_colors',128);              % Number of colours for the 4th dimension. Works only for 4-D plots: Will not have any effect for 3-D plot
+addParamValue(p,'caxis','');                     % Range of the color bar.  Works only for 4-D plots: Will not have any effect for 3-D plot.
+addParamValue(p,'cbar_colors',128);              % Number of colors for the 4th dimension. Works only for 4-D plots: Will not have any effect for 3-D plot
 addParamValue(p,'cbar_position','northoutside'); % Position of the colorbar. Works only for 4-D plots: Will not have any effect for 3-D plot
-addParamValue(p,'cbar_tick_format','');          % Format for the ticks on the colour bar.  Works only for 4-D plots: Will not have any effect for 3-D plot
+addParamValue(p,'cbar_tick_format','');          % Format for the ticks on the color bar.  Works only for 4-D plots: Will not have any effect for 3-D plot
 addParamValue(p,'D2','off')                      % Make an additional 2-D plot of the 4th dimension (thickness/depth, extra variable)
-addParamValue(p,'D4_colormap','jet')             % MATLAB colormap (colour scheme) for the 4th dimension. Works only for 4-D plots: Will not have any effect for 3-D plot
-addParamValue(p,'D4_colormap_flipud','off')      % Inverse the colormap (colour scheme) for the 4th dimension. Works only for 4-D plots: Will not have any effect for 3-D plot
+addParamValue(p,'D4_colormap','jet')             % MATLAB colormap (color scheme) for the 4th dimension. Works only for 4-D plots: Will not have any effect for 3-D plot
+addParamValue(p,'D4_colormap_flipud','off')      % Inverse the colormap (color scheme) for the 4th dimension. Works only for 4-D plots: Will not have any effect for 3-D plot
 addParamValue(p,'extra_dimension','');           % Whether or not to plot a 4th dimension. When empty: 3-D plot; if 'on': 4-D plot of the thickness/depth field; if a variable is given: this one will be plotted as 4th dimension
-addParamValue(p,'label_size','');                % Font size of all labels (on axes, colour bars, for x,y,z-labels and for title). When defined, all other optional label size parameters are neglected
+addParamValue(p,'label_size','');                % Font size of all labels (on axes, color bars, for x,y,z-labels and for title). When defined, all other optional label size parameters are neglected
 addParamValue(p,'light_orientation',[-90 45]);   % Orientation of light source. First value is the azimuth (0=pointing at first row; 90=pointing at last column; 180=pointing at last row; 270=pointing at first column), second one is the height (given as an angle, as seen from the middle of the image)
 addParamValue(p,'size_cm',[20 20]);              % Image size of the plot (in cm)
 addParamValue(p,'size_pix','');                  % Image size of the plot (in pixels)
-addParamValue(p,'sur_color',[1 1 1]);            % Colour of the ice/lava/lake/.. surface in 3-D plot
+addParamValue(p,'sur_color',[1 1 1]);            % Color of the ice/lava/lake/.. surface in 3-D plot
 addParamValue(p,'sur_material','dull');          % Appearance of surface material. Three valid options 'dull', 'metal' and 'shiny'
 addParamValue(p,'sur_trans',1);                  % Transparency of the surface. 0: fully transparent, 1: non-transparent
 addParamValue(p,'tick','on');                    % Show ticks on the axes. Two options: 'on' and 'off'
-addParamValue(p,'tick_size',18);                 % Font size of all axes and colour bars ticks
+addParamValue(p,'tick_size',18);                 % Font size of all axes and color bars ticks
 addParamValue(p,'title','');                     % Title of the figure
 addParamValue(p,'title_size',22);                % Font size of the title
 addParamValue(p,'vertical_scaling',1);           % Fraction of the z-axis that is used to depict the topography. Should be between 0 and 1
