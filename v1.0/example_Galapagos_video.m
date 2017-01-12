@@ -21,7 +21,7 @@ load('example_data_Galapagos_100m.mat') % loads BED and SUR
 mkdir('video_output_Galapagos');
 
 % Details location
-Decl=23; % Summer Solstice
+Decl=23.44; % Summer Solstice
 Lat=-0.5;
 start_time=6+1/15;
 end_time=18-1/15;

@@ -16,8 +16,8 @@ function [h,a] = SunZeko(Decl,Lat,LHA)
 % ------------------ github.com/zekollari/TopoZeko ---------------------- %
 % ----------------------------------------------------------------------- %
 
-if Decl<-23.45 || Decl>23.45
-    error('Error: the declination (decl) must be between -23.45° and +23.45°')
+if Decl<-23.44 || Decl>23.44
+    error('Error: the declination (decl) must be between -23.44° and +23.44°')
 end
 if Lat<-90 || Lat>90
     error('Error: the geographic latitude (LAT) must be between -90° and +90°')
