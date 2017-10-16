@@ -41,6 +41,6 @@ The visualization can be modified with up to 40 additional parameters
 when calling the function (see manuscript for more info).
 
 % -------------------------------------------------------------------------------------- %
-% -------------------------------------- Version- ——————————————————— %
+% -------------------------------------- Version --------------------------------------- %
 % -------------------------------------------------------------------------------------- %
 ---> v1.0: first version, as described in the manuscript
