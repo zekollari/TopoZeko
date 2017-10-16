@@ -1,10 +1,10 @@
 % ----------------------------------------------------------------------- %
-% --------- This script produces the video from the manuscript: --------- %
+% ---------- This script produces video 3 from the manuscript: ---------- %
 % ----------------------------------------------------------------------- %
-% ---------------------------------'TopoZeko: --------------------------- %
-% ---------- A MATLAB function for 3-D and 4-D topographical ------------ %
-% ------------------- visualisation in geosciences' --------------------  %
-% -------------------- (Zekollari, Journal, Year) ----------------------- %
+% ------------------------------ 'TopoZeko: ----------------------------- %
+% --------- A MATLAB function for 3-D and 4-D topographical ------------- %
+% ------------------ visualisation in geosciences' ---------------------- %
+% ------------------ (Zekollari, SoftwareX, 2017) ----------------------- %
 % ----------------------------------------------------------------------- %
 % ------------- All functions, scripts and data related ----------------- %
 % ---------------- to TopoZeko are available online: -------------------- %
@@ -21,7 +21,7 @@ load('example_data_Galapagos_100m.mat') % loads BED and SUR
 mkdir('video_output_Galapagos');
 
 % Details location
-Decl=23.44; % Summer Solstice
+Decl=23; % Summer Solstice
 Lat=-0.5;
 start_time=6+1/15;
 end_time=18-1/15;

@@ -1,10 +1,10 @@
 % ----------------------------------------------------------------------- %
 % ---------- This script produces Figure 2 from the manuscript: --------- %
 % ----------------------------------------------------------------------- %
-% ---------------------------------'TopoZeko: --------------------------- %
-% ---------- A MATLAB function for 3-D and 4-D topographical ------------ %
-% ------------------- visualisation in geosciences' --------------------  %
-% -------------------- (Zekollari, Journal, Year) ----------------------- %
+% ------------------------------ 'TopoZeko: ----------------------------- %
+% --------- A MATLAB function for 3-D and 4-D topographical ------------- %
+% ------------------ visualisation in geosciences' ---------------------- %
+% ------------------ (Zekollari, SoftwareX, 2017) ----------------------- %
 % ----------------------------------------------------------------------- %
 % ------------- All functions, scripts and data related ----------------- %
 % ---------------- to TopoZeko are available online: -------------------- %
@@ -62,3 +62,5 @@ TopoZeko(BED,SUR_LAKE ...
     );
 
 disp(strcat('Time needed to produce 4 figures:',num2str(toc),' seconds'))
+
+

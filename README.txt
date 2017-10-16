@@ -9,8 +9,8 @@ presentations, teaching material,...etc.
 % -------------------------------------------------------------------------------------- %
 % -------------------------------------- Reference ------------------------------------- %
 % -------------------------------------------------------------------------------------- %
-Zekollari, H. (?), A MATLAB function for 3-D and 4-D topographical visualisation in 
-geosciences, Journal.
+Zekollari, H. (accepted), A MATLAB function for 3-D and 4-D topographical visualisation 
+in geosciences, SoftwareX.
 
 Consult this manuscript for various examples, applications and documentation of the 
 TopoZeko function.
@@ -19,7 +19,7 @@ TopoZeko function.
 % --------------------------------- Usage and examples --------------------------------- %
 % -------------------------------------------------------------------------------------- %
 All files (function, scripts and data) are available in the folders with the respective 
-version numbers. Launch the scripts (e.g. example_Morteratsch_figure1.m) to reproduce the 
+version numbers. Launch the scripts (e.g. example_Morteratsch_figure2.m) to reproduce the 
 figures from the manuscript. For your own visualizations use the TopoZeko.m function and 
 adapt to specific needs.
 
@@ -38,9 +38,9 @@ surface plot of the matrix 'ELEV'. The colorbar is used to display the
 matrix 'VEL' (4th dimension)
 
 The visualization can be modified with up to 40 additional parameters
-when calling the function (see manuscript).
+when calling the function (see manuscript for more info).
 
 % -------------------------------------------------------------------------------------- %
-% -------------------------------------- Reference ------------------------------------- %
+% -------------------------------------- Version- ——————————————————— %
 % -------------------------------------------------------------------------------------- %
 ---> v1.0: first version, as described in the manuscript

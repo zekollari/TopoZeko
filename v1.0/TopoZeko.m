@@ -1,7 +1,7 @@
 function TopoZeko(BED,SUR,varargin)
-% TopoZeko is a matlab function developed to make 3-D and 4-D plots of
-% surfaces with a pronounced topographical setting such as glaciers,
-% volcanoes and lakes in mountaineous regions. It is strongly encouraged to
+% TopoZeko is a MATLAB function which can produce 3-D and 4-D plots of
+% surfaces with a pronounced topographical setting, such as glaciers,
+% volcanoes and lakes in mountainous regions. It is strongly encouraged to
 % use this code for your scientific publications, presentations, teaching
 % material,...etc.
 %
@@ -21,10 +21,10 @@ function TopoZeko(BED,SUR,varargin)
 % when calling the function.
 % For additional information, examples and reference consult:
 % ----------------------------------------------------------------------- %
-% ---------------------------------'TopoZeko: --------------------------- %
-% ---------- A MATLAB function for 3-D and 4-D topographical ------------ %
-% ------------------- visualisation in geosciences' --------------------  %
-% -------------------- (Zekollari, Journal, Year) ----------------------- %
+% ------------------------------ 'TopoZeko: ----------------------------- %
+% --------- A MATLAB function for 3-D and 4-D topographical ------------- %
+% ------------------ visualisation in geosciences' ---------------------- %
+% ------------------ (Zekollari, SoftwareX, 2017) ----------------------- %
 % ----------------------------------------------------------------------- %
 % ------------- All functions, scripts and data related ----------------- %
 % ---------------- to TopoZeko are available online: -------------------- %
@@ -38,27 +38,27 @@ p = inputParser;
 % List of optional parameters and default values:
 % addParamValue --> addParameter (works from R2013b, recommened to use this if run with version after R2013b)
 addParamValue(p,'axes','off');                   % Show the axes. Two options: 'on' and 'off'
-addParamValue(p,'bed_colors',128);               % Number of colors for bedrock (integer, should at least be 1)
-addParamValue(p,'bed_colormap','copper')         % MATLAB colormap (color scheme) for the bedrock
-addParamValue(p,'bed_colormap_flipud','on')      % Inverse the colormap (color scheme) for the bedrock. Two options: 'on' and 'off'
+addParamValue(p,'bed_colors',128);               % Number of colours for bedrock (integer, should at least be 1)
+addParamValue(p,'bed_colormap','copper')         % MATLAB colormap (colour scheme) for the bedrock
+addParamValue(p,'bed_colormap_flipud','on')      % Inverse the colormap (colour scheme) for the bedrock. Two options: 'on' and 'off'
 addParamValue(p,'bed_trans',1);                  % Transparency of the bedrock. 0: fully transparent, 1: non-transparent
-addParamValue(p,'caxis','');                     % Range of the color bar.  Works only for 4-D plots: Will not have any effect for 3-D plot.
-addParamValue(p,'cbar_colors',128);              % Number of colors for the 4th dimension. Works only for 4-D plots: Will not have any effect for 3-D plot
+addParamValue(p,'caxis','');                     % Range of the colour bar.  Works only for 4-D plots: Will not have any effect for 3-D plot.
+addParamValue(p,'cbar_colors',128);              % Number of colours for the 4th dimension. Works only for 4-D plots: Will not have any effect for 3-D plot
 addParamValue(p,'cbar_position','northoutside'); % Position of the colorbar. Works only for 4-D plots: Will not have any effect for 3-D plot
-addParamValue(p,'cbar_tick_format','');          % Format for the ticks on the color bar.  Works only for 4-D plots: Will not have any effect for 3-D plot
+addParamValue(p,'cbar_tick_format','');          % Format for the ticks on the colour bar.  Works only for 4-D plots: Will not have any effect for 3-D plot
 addParamValue(p,'D2','off')                      % Make an additional 2-D plot of the 4th dimension (thickness/depth, extra variable)
-addParamValue(p,'D4_colormap','jet')             % MATLAB colormap (color scheme) for the 4th dimension. Works only for 4-D plots: Will not have any effect for 3-D plot
-addParamValue(p,'D4_colormap_flipud','off')      % Inverse the colormap (color scheme) for the 4th dimension. Works only for 4-D plots: Will not have any effect for 3-D plot
+addParamValue(p,'D4_colormap','jet')             % MATLAB colormap (colour scheme) for the 4th dimension. Works only for 4-D plots: Will not have any effect for 3-D plot
+addParamValue(p,'D4_colormap_flipud','off')      % Inverse the colormap (colour scheme) for the 4th dimension. Works only for 4-D plots: Will not have any effect for 3-D plot
 addParamValue(p,'extra_dimension','');           % Whether or not to plot a 4th dimension. When empty: 3-D plot; if 'on': 4-D plot of the thickness/depth field; if a variable is given: this one will be plotted as 4th dimension
-addParamValue(p,'label_size','');                % Font size of all labels (on axes, color bars, for x,y,z-labels and for title). When defined, all other optional label size parameters are neglected
+addParamValue(p,'label_size','');                % Font size of all labels (on axes, colour bars, for x,y,z-labels and for title). When defined, all other optional label size parameters are neglected
 addParamValue(p,'light_orientation',[-90 45]);   % Orientation of light source. First value is the azimuth (0=pointing at first row; 90=pointing at last column; 180=pointing at last row; 270=pointing at first column), second one is the height (given as an angle, as seen from the middle of the image)
 addParamValue(p,'size_cm',[20 20]);              % Image size of the plot (in cm)
 addParamValue(p,'size_pix','');                  % Image size of the plot (in pixels)
-addParamValue(p,'sur_color',[1 1 1]);            % Color of the ice/lava/lake/.. surface in 3-D plot
+addParamValue(p,'sur_color',[1 1 1]);            % Colour of the ice/lava/lake/.. surface in 3-D plot
 addParamValue(p,'sur_material','dull');          % Appearance of surface material. Three valid options 'dull', 'metal' and 'shiny'
 addParamValue(p,'sur_trans',1);                  % Transparency of the surface. 0: fully transparent, 1: non-transparent
 addParamValue(p,'tick','on');                    % Show ticks on the axes. Two options: 'on' and 'off'
-addParamValue(p,'tick_size',18);                 % Font size of all axes and color bars ticks
+addParamValue(p,'tick_size',18);                 % Font size of all axes and colour bars ticks
 addParamValue(p,'title','');                     % Title of the figure
 addParamValue(p,'title_size',22);                % Font size of the title
 addParamValue(p,'vertical_scaling',1);           % Fraction of the z-axis that is used to depict the topography. Should be between 0 and 1
@@ -80,28 +80,33 @@ addParamValue(p,'zlim','');                      % Range of the z-axis
 
 parse(p,varargin{:});
 
+% if ~isempty(p.UsingDefaults)
+%    disp('Using defaults: ');
+%    disp(p.UsingDefaults);
+% end
+
 % BED and SUR should have same size:
 if size(BED)~=size(SUR)
     error('Error: dimensions of bedrock elevation matrix and surface elevation matrix do not agree')
 end
 
 if strcmp(p.Results.extra_dimension,'')==1 || strcmp(p.Results.extra_dimension,'on')==1 % The extra dimension results from the difference between the bedrock and the surface elevation
-    THI=SUR-BED; % Thickness (ice thickness / lake depth /...) is obtained by subtracting the bedrock elevation from the surface elevation
+    THI=SUR-BED; % Thickness (ice thickness / lake depth /...) by subtracting the bedrock elevation from the surface elevation
 else % The extra dimension is given when calling the function (e.g. surface velocity, thickness change,...)
     THI=p.Results.extra_dimension;
 end
 
-% If thickness is everywhere equal to NaN --> put it to zero everywhere:
+% If thickness everywhere NaN --> put it to zero everywhere:
 i=find(isnan(THI)==0);
 if length(i)==0
     THI(:,:)=0;
 end
 
-% Specify the 'Larger than' and 'Smaller than' flags (used for the 4-D plots)
+% 'Larger than' and 'Smaller than' flags: used for the 4-D plots
 larger_than_flag=0;
 smaller_than_flag=0;
 
-if strcmp(p.Results.extra_dimension,'')==1 || strcmp(p.Results.caxis,'')==1 || strcmp(p.Results.caxis,'off')==1 % if 3-D plot or no limits are given for the fourth dimension
+if strcmp(p.Results.extra_dimension,'')==1 || strcmp(p.Results.caxis,'')==1 || strcmp(p.Results.caxis,'off')==1
     THI_MIN=min(min(THI));
     THI_MAX=max(max(THI));
 elseif strcmp(p.Results.caxis,'')==0 % In case limits are given for the 4th dimension
@@ -109,11 +114,11 @@ elseif strcmp(p.Results.caxis,'')==0 % In case limits are given for the 4th dime
     THI_MAX=p.Results.caxis(2);
     i=find(THI>THI_MAX);THI(i)=THI_MAX;
     if length(i)>0
-        larger_than_flag=1; % Important for labelling later on
+        larger_than_flag=1;
     end
     i=find(THI<THI_MIN);THI(i)=THI_MIN;
     if length(i)>0
-        smaller_than_flag=1; % Important for labelling later on
+        smaller_than_flag=1;
     end
 end
 
@@ -122,7 +127,7 @@ THI_DIF=THI_MAX-THI_MIN;
 BED_MIN=min(min(BED));
 BED_MAX=max(max(BED));
 
-if strcmp(p.Results.extra_dimension,'')==1 || strcmp(p.Results.extra_dimension,'on')==1 % In the case of a 3-D plot: 3rd dimension (thickness/depth) cannot be smaller than 0 (bedrock cannot be higher than surface elevation)
+if strcmp(p.Results.extra_dimension,'')==1 || strcmp(p.Results.extra_dimension,'on')==1 % In the case of a 3-D plot: 3rd dimension (thickness/depth) cannot be smaller than 0
     i=find(THI<0);
     if isempty(i)==0
         error('Error: bedrock elevation exceeds surface elevation')
@@ -131,7 +136,6 @@ end
 i=find(THI==0);THI(i)=NaN;
 mask=nan(size(THI));i=find(THI>0);mask(i)=-Inf;
 
-% Determine which rows/values have to be plotted:
 a=size(BED);
 if strcmp(p.Results.xvalues,'')==1
     x1=1;
@@ -148,10 +152,10 @@ else
     y2=p.Results.yvalues(2);
 end
 
+if strcmp(p.Results.D2,'on')==1
 % ----------------------------------------------------------------------- %
 %  2-D plot of the 4th dimension (thickness/depth, additional variable)   %
 % ----------------------------------------------------------------------- %
-if strcmp(p.Results.D2,'on')==1
     figure;
     set(gcf,'Units','centimeters');
     set(gcf,'Position',[0 1 p.Results.size_cm]);
@@ -190,17 +194,16 @@ end
 % ---- 3-D plot (one color where surface and bedrock elevation differ)--- %
 % ----------------------------------------------------------------------- %
 if strcmp(p.Results.extra_dimension,'')==1
-    h1=surf(x1:(x2-x1)/(a(2)-1):x2,y1:(y2-y1)/(a(1)-1):y2,BED); hold on; % Bedrock topography is plotted
-    alpha(h1,p.Results.bed_trans); % Adapt bedrock transparency
-    % Make artificial (concatenated) colormap:
+    h1=surf(x1:(x2-x1)/(a(2)-1):x2,y1:(y2-y1)/(a(1)-1):y2,BED); hold on; % Bedrock topography
+    alpha(h1,p.Results.bed_trans);
     if strcmp(p.Results.bed_colormap_flipud,'off')==1
         colormap([p.Results.sur_color;eval(strcat(p.Results.bed_colormap,'(',num2str(p.Results.bed_colors),')'))]);
     elseif strcmp(p.Results.bed_colormap_flipud,'on')==1
         colormap([p.Results.sur_color;flipud(eval(strcat(p.Results.bed_colormap,'(',num2str(p.Results.bed_colors),')')))]);
     end
-    caxis([BED_MIN-(1/p.Results.bed_colors)*(BED_MAX-BED_MIN) BED_MAX]);
-    h2=surf(x1:(x2-x1)/(a(2)-1):x2,y1:(y2-y1)/(a(1)-1):y2,SUR,mask); hold on; % Plot surface topography (with colors as chosen with 'sur_color')
-    alpha(h2,p.Results.sur_trans); % Adapt surface transparency 
+    caxis([BED_MIN-(1/p.Results.bed_colors)*(BED_MAX-BED_MIN) BED_MAX])
+    h2=surf(x1:(x2-x1)/(a(2)-1):x2,y1:(y2-y1)/(a(1)-1):y2,SUR,mask); hold on; % Surface topography (with colors as chosen with 'sur_color')
+    alpha(h2,p.Results.sur_trans);
 
     % z-lim:
     if strcmp(p.Results.zlim,'')==0 % zlim is given
@@ -217,9 +220,8 @@ if strcmp(p.Results.extra_dimension,'')==1
 % ---- 4-D plot (spatial variation in thickness/depth/4th dimension) ---- %
 % ----------------------------------------------------------------------- %
 elseif strcmp(p.Results.extra_dimension,'')==0
-    h1=surf(x1:(x2-x1)/(a(2)-1):x2,y1:(y2-y1)/(a(1)-1):y2,p.Results.cbar_colors+((BED-BED_MIN)/(BED_MAX-BED_MIN))*p.Results.bed_colors); hold on; % Bedrock topography is plotted
-    alpha(h1,p.Results.bed_trans); % Adapt bedrock transparency
-    % Make artificial (concatenated) colormap:
+    h1=surf(x1:(x2-x1)/(a(2)-1):x2,y1:(y2-y1)/(a(1)-1):y2,p.Results.cbar_colors+((BED-BED_MIN)/(BED_MAX-BED_MIN))*p.Results.bed_colors); hold on; % Bedrock topography
+    alpha(h1,p.Results.bed_trans);
     if strcmp(p.Results.D4_colormap_flipud,'off')==1 && strcmp(p.Results.bed_colormap_flipud,'off')==1
         colormap([eval(strcat(p.Results.D4_colormap,'(round(p.Results.cbar_colors))'));eval(strcat(p.Results.bed_colormap,'(',num2str(p.Results.bed_colors),')'))]);
     elseif strcmp(p.Results.D4_colormap_flipud,'on')==1 && strcmp(p.Results.bed_colormap_flipud,'off')==1
@@ -230,9 +232,9 @@ elseif strcmp(p.Results.extra_dimension,'')==0
         colormap([flipud(eval(strcat(p.Results.D4_colormap,'(round(p.Results.cbar_colors))')));flipud(eval(strcat(p.Results.bed_colormap,'(',num2str(p.Results.bed_colors),')')))]);
     end
     caxis([0 p.Results.cbar_colors+p.Results.bed_colors]);
-    h = colorbar; % Display the colorbar
-    h2=surf(x1:(x2-x1)/(a(2)-1):x2,y1:(y2-y1)/(a(1)-1):y2,p.Results.cbar_colors+((SUR-BED_MIN)/(BED_MAX-BED_MIN))*p.Results.bed_colors,(THI-THI_MIN)/(THI_DIF)*p.Results.cbar_colors); hold on; % Plot surface topography (with colorbar as chosen with 'D4_colormap')
-    alpha(h2,p.Results.sur_trans); % Adapt surface transparency
+    h = colorbar;
+    h2=surf(x1:(x2-x1)/(a(2)-1):x2,y1:(y2-y1)/(a(1)-1):y2,p.Results.cbar_colors+((SUR-BED_MIN)/(BED_MAX-BED_MIN))*p.Results.bed_colors,(THI-THI_MIN)/(THI_DIF)*p.Results.cbar_colors); hold on;
+    alpha(h2,p.Results.sur_trans);
     set(h,'location',p.Results.cbar_position)
     
     orient=get(h,'xlim'); % Needed to determine orientation axes (for newer MATLAB versions, not needed: use TickLabels instead of XTickLabel/YTickLabel)
@@ -243,7 +245,7 @@ elseif strcmp(p.Results.extra_dimension,'')==0
         set(h,'ylim',[0 p.Results.cbar_colors])
         set(h,'YTick',0:p.Results.cbar_colors/5:p.Results.cbar_colors)
     end
-    if strcmp(p.Results.cbar_tick_format,'')==1 % Case where no format is given
+    if strcmp(p.Results.cbar_tick_format,'')==1 % No format is given
         if THI_DIF>100 % If the range is larger than 100: round
             tick1=num2str(round(THI_MIN));
             tick2=num2str(round(THI_MIN+THI_DIF/5));
@@ -260,7 +262,7 @@ elseif strcmp(p.Results.extra_dimension,'')==0
         tick5=num2str(round((THI_MIN+4*THI_DIF/5)*factor)/factor,'%g');
         tick6=num2str(round((THI_MIN+THI_DIF)*factor)/factor,'%g');
         end
-    else % if format is given:
+    else % format is given:
         tick1=num2str((THI_MIN),p.Results.cbar_tick_format);
         tick2=num2str((THI_MIN+THI_DIF/5),p.Results.cbar_tick_format);
         tick3=num2str((THI_MIN+2*THI_DIF/5),p.Results.cbar_tick_format);
@@ -268,7 +270,7 @@ elseif strcmp(p.Results.extra_dimension,'')==0
         tick5=num2str((THI_MIN+4*THI_DIF/5),p.Results.cbar_tick_format);
         tick6=num2str((THI_MIN+THI_DIF),p.Results.cbar_tick_format);
     end
-    if smaller_than_flag==1 && larger_than_flag==1 % Adapt the labelling
+    if smaller_than_flag==1 && larger_than_flag==1
         if orient(2)==p.Results.bed_colors+p.Results.cbar_colors;
             set(h,'XTickLabel',{strcat('<',tick1),tick2,tick3,tick4,tick5,strcat('>',tick6)});
         else

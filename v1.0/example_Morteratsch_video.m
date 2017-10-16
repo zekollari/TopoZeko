@@ -1,10 +1,10 @@
 % ----------------------------------------------------------------------- %
-% --------- This script produces the video from the manuscript: --------- %
+% -------- This script produces video 1 & 2 from the manuscript: -------- %
 % ----------------------------------------------------------------------- %
-% ---------------------------------'TopoZeko: --------------------------- %
-% ---------- A MATLAB function for 3-D and 4-D topographical ------------ %
-% ------------------- visualisation in geosciences' --------------------  %
-% -------------------- (Zekollari, Journal, Year) ----------------------- %
+% ------------------------------ 'TopoZeko: ----------------------------- %
+% --------- A MATLAB function for 3-D and 4-D topographical ------------- %
+% ------------------ visualisation in geosciences' ---------------------- %
+% ------------------ (Zekollari, SoftwareX, 2017) ----------------------- %
 % ----------------------------------------------------------------------- %
 % ------------- All functions, scripts and data related ----------------- %
 % ---------------- to TopoZeko are available online: -------------------- %

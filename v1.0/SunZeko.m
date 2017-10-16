@@ -1,30 +1,20 @@
 function [h,a] = SunZeko(Decl,Lat,LHA)
-% sun_zeko is a matlab function developed to calculate the position of the
+% sun_zeko is a MATLAB function that calculates the position of the
 % sun (height and azimuth) for a given declination of the sun (Decl),
 % geographic latitude (LAT) and Local Hour Angle (LHA). It is strongly 
 % encouraged to use this code for your scientific publications,
 % presentations,teaching material,...etc.
 % Additional information, examples and reference:
 % ----------------------------------------------------------------------- %
-% ---------------------------------'TopoZeko: --------------------------- %
-% ---------- A MATLAB function for 3-D and 4-D topographical ------------ %
-% ------------------- visualisation in geosciences' --------------------  %
-% -------------------- (Zekollari, Journal, Year) ----------------------- %
+% ------------------------------ 'TopoZeko: ----------------------------- %
+% --------- A MATLAB function for 3-D and 4-D topographical ------------- %
+% ------------------ visualisation in geosciences' ---------------------- %
+% ------------------ (Zekollari, SoftwareX, 2017) ----------------------- %
 % ----------------------------------------------------------------------- %
 % ------------- All functions, scripts and data related ----------------- %
 % ---------------- to TopoZeko are available online: -------------------- %
 % ------------------ github.com/zekollari/TopoZeko ---------------------- %
 % ----------------------------------------------------------------------- %
-
-if Decl<-23.44 || Decl>23.44
-    error('Error: the declination (decl) must be between -23.44° and +23.44°')
-end
-if Lat<-90 || Lat>90
-    error('Error: the geographic latitude (LAT) must be between -90° and +90°')
-end
-if LHA<-180 || LHA>180
-    error('Error: the local hour angle (LHA) must be between -180° and +180°')
-end
 
 % Calculation of the elevation of the sun (h)
 h=asind(sind(Lat)*sind(Decl)+cosd(Lat)*cosd(Decl)*cosd(LHA));
