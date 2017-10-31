@@ -33,7 +33,7 @@ function TopoZeko(BED,SUR,varargin)
 
 p = inputParser;
 
-% Function always need a 2-D field for BED (bedrock elevation) and SUR (surface elevation)
+% Function always needs a 2-D field for BED (bedrock elevation) and SUR (surface elevation)
 
 % List of optional parameters and default values:
 % addParamValue --> addParameter (works from R2013b, recommened to use this if run with version after R2013b)
