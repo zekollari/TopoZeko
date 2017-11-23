@@ -9,8 +9,8 @@ presentations, teaching material,...etc.
 % -------------------------------------------------------------------------------------- %
 % -------------------------------------- Reference ------------------------------------- %
 % -------------------------------------------------------------------------------------- %
-Zekollari, H. (accepted), A MATLAB function for 3-D and 4-D topographical visualisation 
-in geosciences, SoftwareX.
+Zekollari, H. (2017), A MATLAB function for 3-D and 4-D topographical visualisation 
+in geosciences, SoftwareX, 6, 285-292.
 
 Consult this manuscript for various examples, applications and documentation of the 
 TopoZeko function.

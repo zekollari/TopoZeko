@@ -24,7 +24,7 @@ function TopoZeko(BED,SUR,varargin)
 % ------------------------------ 'TopoZeko: ----------------------------- %
 % --------- A MATLAB function for 3-D and 4-D topographical ------------- %
 % ------------------ visualisation in geosciences' ---------------------- %
-% ------------------ (Zekollari, SoftwareX, 2017) ----------------------- %
+% ------------- (Zekollari, SoftwareX 6 (2017) 285-292) ----------------- %
 % ----------------------------------------------------------------------- %
 % ------------- All functions, scripts and data related ----------------- %
 % ---------------- to TopoZeko are available online: -------------------- %
